@@ -36,7 +36,7 @@ class Reproductor extends Multimedia{
     }
 
     setInicio(tiempo){
-        this._url = `${this._url}?start=${tiempo}`;//&t=20
+        this._url = `${this._url}?start=${tiempo}`;
     }
 }
 
@@ -58,3 +58,4 @@ reproductorPeliculas.setInicio(20);
 reproductorMusica.playMultimedia();
 reproductorPeliculas.playMultimedia();
 reproductorSeries.playMultimedia();
+
