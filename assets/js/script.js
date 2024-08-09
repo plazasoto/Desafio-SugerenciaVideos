@@ -43,17 +43,28 @@ class Reproductor extends Multimedia{
 /* IDs: musica peliculas series */
 /* URLs */
 let embedYT = "https://www.youtube.com/embed/";
-let urlMusica = "6BUgYDmlVow";
-let urlPeliculas = "tw1Mfikk5M8";
-let urlSeries = "APWXorE6h8U";
+let urlMusica = [["6BUgYDmlVow", 0]];
+let urlPeliculas = [
+    ["tw1Mfikk5M8", 20],
+    ["cW7KqfSToQU", 0]
+];
+let urlSeries = [["APWXorE6h8U", 0]];
+
+const random = [
+    Math.floor(Math.random() * urlMusica.length),
+    Math.floor(Math.random() * urlPeliculas.length),
+    Math.floor(Math.random() * urlSeries.length)
+];
 
 /* Instancias de clases */
-let reproductorMusica = new Reproductor(embedYT + urlMusica, "musica");
-let reproductorPeliculas = new Reproductor(embedYT + urlPeliculas, "peliculas");
-let reproductorSeries = new Reproductor(embedYT + urlSeries, "series");
+let reproductorMusica = new Reproductor(embedYT + urlMusica[random[0]][0], "musica");
+let reproductorPeliculas = new Reproductor(embedYT + urlPeliculas[random[1]][0], "peliculas");
+let reproductorSeries = new Reproductor(embedYT + urlSeries[random[2]][0], "series");
 
 /* Mostrar videos */
-reproductorPeliculas.setInicio(20);
+reproductorMusica.setInicio(urlMusica[random[0]][1]);
+reproductorPeliculas.setInicio(urlPeliculas[random[1]][1]);
+reproductorSeries.setInicio(urlSeries[random[2]][1]);
 
 reproductorMusica.playMultimedia();
 reproductorPeliculas.playMultimedia();
