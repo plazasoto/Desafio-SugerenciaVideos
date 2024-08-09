@@ -42,17 +42,19 @@ class Reproductor extends Multimedia{
 
 /* IDs: musica peliculas series */
 /* URLs */
-let urlMusica = "https://www.youtube.com/embed/6BUgYDmlVow";
-let urlPeliculas = "https://www.youtube.com/embed/tw1Mfikk5M8";
-let urlSeries = "https://www.youtube.com/embed/APWXorE6h8U";
+let embedYT = "https://www.youtube.com/embed/";
+let urlMusica = "6BUgYDmlVow";
+let urlPeliculas = "tw1Mfikk5M8";
+let urlSeries = "APWXorE6h8U";
 
 /* Instancias de clases */
-let reproductorMusica = new Reproductor(urlMusica, "musica");
-let reproductorPeliculas = new Reproductor(urlPeliculas, "peliculas");
-let reproductorSeries = new Reproductor(urlSeries, "series");
+let reproductorMusica = new Reproductor(embedYT + urlMusica, "musica");
+let reproductorPeliculas = new Reproductor(embedYT + urlPeliculas, "peliculas");
+let reproductorSeries = new Reproductor(embedYT + urlSeries, "series");
 
 /* Mostrar videos */
 reproductorPeliculas.setInicio(20);
+
 reproductorMusica.playMultimedia();
 reproductorPeliculas.playMultimedia();
 reproductorSeries.playMultimedia();
