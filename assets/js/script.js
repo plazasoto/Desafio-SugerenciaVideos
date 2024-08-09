@@ -33,7 +33,11 @@ class Reproductor extends Multimedia{
         this._id = id;
     }
 
-    playMultimedia(){}
+    playMultimedia(){
+        moduloSrc.setSrc(this._url, this._id);
+    }
 
-    setInicio(){}
+    setInicio(tiempo){
+        this._url = `${this._url}?start=${tiempo}`;
+    }
 }
