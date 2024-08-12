@@ -43,12 +43,21 @@ class Reproductor extends Multimedia{
 /* IDs: musica peliculas series */
 /* URLs */
 let embedYT = "https://www.youtube.com/embed/";
-let urlMusica = [["6BUgYDmlVow", 0]];
+let urlMusica = [
+    ["6BUgYDmlVow", 0],
+    ["otrdJat4i0I", 0],
+    ["1aHRwRnFv9k", 4735]
+];
 let urlPeliculas = [
     ["tw1Mfikk5M8", 20],
-    ["cW7KqfSToQU", 0]
+    ["cW7KqfSToQU", 0],
+    ["daX9H-qChOw", 84]
 ];
-let urlSeries = [["APWXorE6h8U", 0]];
+let urlSeries = [
+    ["APWXorE6h8U", 0],
+    ["7I6ZSaXhbYk", 0],
+    ["t3uKEHojJGg", 2]
+];
 
 const random = [
     Math.floor(Math.random() * urlMusica.length),
